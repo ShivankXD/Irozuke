@@ -1,0 +1,16 @@
+# Irozuke AI — Backend Dependencies
+# Install with: pip install -r requirements.txt
+
+# ── Core API framework ────────────────────────────────────────────────────────
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-multipart==0.0.12      # required for UploadFile / Form support
+
+# ── Image processing ──────────────────────────────────────────────────────────
+Pillow==10.4.0
+
+# ── Future: GAN model dependencies (uncomment when integrating) ───────────────
+# torch==2.3.0
+# torchvision==0.18.0
+# opencv-python==4.10.0.84
+# numpy==1.26.4

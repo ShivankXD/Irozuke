@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#ffcc00",
+                    "outline": "#1a1a1a",
+                    "surface-container-high": "#e8e3da",
+                    "on-secondary": "#1a1a1a",
+                    "secondary": "#e63b2e",
+                    "surface-container": "#eee9e0",
+                    "on-surface": "#1a1a1a",
+                    "background": "#f5f0e8",
+                    "tertiary": "#0055ff",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e8e3da",
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .neo-shadow { box-shadow: 8px 8px 0px 0px rgba(26, 26, 26, 1); }
+        .neo-shadow-yellow { box-shadow: 8px 8px 0px 0px rgba(255, 204, 0, 1); }
+        .bauhaus-grid { background-image: radial-gradient(#1a1a1a 1px, transparent 1px); background-size: 40px 40px; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background overflow-x-hidden">
+    
+<header class="flex justify-between items-center w-full px-8 py-6 sticky top-0 z-[100] bg-[#f5f0e8] border-b-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+    <div class="text-4xl font-black italic tracking-tighter text-black font-['Space_Grotesk'] uppercase cursor-pointer" onclick="showPage('home')">IROZUKE.AI</div>
+    <nav class="hidden md:flex gap-4">
+        <button onclick="showPage('home')" class="nav-btn bg-[#ffcc00] text-black border-2 border-black px-4 py-1 font-['Space_Grotesk'] uppercase font-bold tracking-tighter transition-all" data-page="home">Studio</button>
+        <button onclick="showPage('techniques')" class="nav-btn text-black hover:bg-[#0055ff] hover:text-white transition-colors px-4 py-1 font-['Space_Grotesk'] uppercase font-bold tracking-tighter" data-page="techniques">Models</button>
+        <button onclick="showPage('armory')" class="nav-btn text-black hover:bg-[#0055ff] hover:text-white transition-colors px-4 py-1 font-['Space_Grotesk'] uppercase font-bold tracking-tighter" data-page="armory">Gallery</button>
+        <button onclick="showPage('join')" class="nav-btn text-black hover:bg-[#0055ff] hover:text-white transition-colors px-4 py-1 font-['Space_Grotesk'] uppercase font-bold tracking-tighter" data-page="join">Join Devs</button>
+    </nav>
+    <button onclick="showPage('join')" class="bg-black text-white px-8 py-2 font-['Space_Grotesk'] uppercase font-bold tracking-tighter hover:bg-[#ffcc00] hover:text-black transition-all border-2 border-black">BETA ACCESS</button>
+</header>
+
+    <main class="max-w-[1440px] mx-auto">
+        <div id="home" class="page-section"><!-- Hero Section -->
+<section class="relative min-h-[921px] flex flex-col md:flex-row items-center justify-center p-8 border-b-4 border-outline bauhaus-grid overflow-hidden">
+<div class="absolute top-10 left-10 w-32 h-32 bg-secondary rounded-full -z-10 animate-pulse"></div>
+<div class="absolute bottom-20 right-20 w-64 h-64 bg-primary-fixed -z-10 rotate-12 neo-shadow"></div>
+<div class="flex-1 z-10">
+<h1 class="font-headline font-black text-[10vw] leading-[0.9] tracking-tighter uppercase mb-6 text-outline">IRO<br/>ZUKE</h1>
+<p class="font-headline text-2xl font-bold uppercase tracking-tight max-w-md bg-white p-4 border-4 border-outline neo-shadow mb-8">NEURAL MANGA RENDERING. VIBRANCE BY DESIGN. COLOR BY INTELLIGENCE.</p>
+<div class="flex gap-4">
+<button class="bg-tertiary text-white px-10 py-4 font-headline font-black uppercase text-xl border-4 border-outline neo-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">COLORIZE NOW</button>
+</div>
+</div>
+<div class="flex-1 relative mt-12 md:mt-0 flex justify-center items-center">
+<div class="relative w-80 h-80 bg-outline flex items-center justify-center rotate-45 group">
+<div class="absolute w-full h-2 bg-primary-fixed -rotate-45"></div>
+<div class="absolute w-2 h-full bg-primary-fixed -rotate-45"></div>
+<div class="absolute inset-4 bg-background border-4 border-outline flex items-center justify-center -rotate-45 overflow-hidden">
+<img class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBHxW9IpR9Iu4zn8CKkWeCeLKhCiKPBAzfWThZ5OHo80fvESXzanykNMlrgALVEwEbn8Lb6chfWl09kQk08MsY6UJHeUYO5T3h1YvV_xD1go3go_admwbJoyFAVZv_z5GP6WWrI3r7HBNLYpFb0m7jc7ZPoO8bh3pu9DegkkT0vAmBjW07Jve6bkrq9rME_eSrRCt_45cvSXbES580bBZ6FIaaVms2VCN8Xhsm8AZ--ikzLEfoKBGqvY2go65nbKUv950hxxbGWnE"/>
+</div>
+</div>
+</div>
+</section>
+<section class="p-8 border-b-4 border-outline">
+<div class="flex items-end gap-4 mb-12"><h2 class="font-headline font-black text-7xl uppercase tracking-tighter leading-none">THE SPECTRUM OF AI</h2><div class="h-2 w-full bg-outline flex-1 mb-2"></div></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="md:col-span-2 bg-white border-4 border-outline p-8 neo-shadow flex flex-col justify-between group hover:bg-primary-fixed transition-colors">
+<div><span class="material-symbols-outlined text-6xl mb-4">palette</span><h3 class="font-headline font-extrabold text-4xl mb-4 uppercase">AUTONOMOUS HUES</h3><p class="text-lg leading-relaxed">Master the art of spectral prediction. Irozuke doesn't just fill space; it understands the Mangaka's intent.</p></div>
+<img class="mt-8 border-2 border-outline h-48 object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC05iD_TZptnUdFBprcb1Jm2dQNpGwmFNYuvqI_43OFQljznLL4NJqpGOLug2AyF3ASwZUnkoW6l3wZjPVwhffba1uNDizzOT0hqF_NyaGCKDQCNiyq6rBoFjge5EgFnLIxrNdMYlVlYUuKCVFaxvcbgQ72WaIE-luYHrMFzyT44vYAMvI1BW30vmBTH97vZqXCje8vx2dl_1HGrMMgpIvyetO_s4-CXVZxQhnkP9YMpHH8w5-0kial7nGOFEeXqBsko2Hu1Du-p6E"/>
+</div>
+<div class="bg-secondary text-white border-4 border-outline p-8 neo-shadow-yellow">
+<span class="material-symbols-outlined text-6xl mb-4">auto_fix_high</span><h3 class="font-headline font-extrabold text-3xl mb-4 uppercase leading-none">INSTANT VIBRANCE</h3><p class="font-medium">Transform entire chapters in seconds. Latency is a flaw in the geometry of creative flow.</p>
+</div>
+<div class="bg-outline text-background border-4 border-outline p-8 neo-shadow flex flex-col items-center justify-center text-center">
+<div class="w-full h-full border-2 border-primary-fixed p-4 flex flex-col items-center justify-center"><span class="text-8xl font-black font-headline text-primary-fixed mb-2">4K</span><span class="font-headline font-bold uppercase tracking-widest">UPSCALING</span></div>
+</div>
+<div class="md:col-span-4 bg-surface-container border-4 border-outline p-12 flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1"><h3 class="font-headline font-black text-5xl uppercase mb-6">LINE IS VOID</h3><p class="text-xl mb-6">Neural networks and anatomy converge. Our models utilize depth-estimation to create authentic shadows and atmospheric perspective.</p><button class="bg-outline text-white px-8 py-3 font-headline font-bold uppercase border-2 border-outline hover:invert transition-all">VIEW DOCS</button></div>
+<div class="w-full md:w-1/3 aspect-square bg-outline flex items-center justify-center overflow-hidden border-4 border-outline"><img class="object-cover w-full h-full opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo5LtK4IdO7MC0m66mWhk19cD_tIx-u2sA0fBJazfBZ7kNsMgj9rTcMVBRUdF1gHNTJYofozgFTkxi67Fv4b_eO_N-W7Ci929nGE1kqngxBBVzGTmvRbihS-bch6rW2hQ37POSwd0OFzk8ElfbnFN_V_ArbEP0e2G8Lw5WRZHif88_BkMf7vRPbLI6qWz-QFSkEvtxB-K72joGybYA9DWQu2OOUCFZ7YS4KA78gDOBn6_Dfg7OEADXuUQccDfmURW2YNWhglhXHqU"/></div>
+</div>
+</div>
+</section></div>
+        <div id="techniques" class="page-section hidden"><header class="mb-24 flex flex-col md:flex-row justify-between items-end gap-8 border-b-8 border-black pb-12">
+<div class="max-w-2xl"><h1 class="text-8xl md:text-[10rem] font-black leading-[0.85] tracking-tighter uppercase mb-8">NEURAL<br/>COLOR<br/><span class="text-secondary">MODELS</span></h1><p class="text-xl font-medium max-w-lg leading-relaxed uppercase tracking-tight">Machine learning meets Mangaka precision. The Irozuke AI architecture is built on the pillars of GAN efficiency and stable diffusion.</p></div>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-4 border-black">
+<div class="border-4 border-black p-8 bg-surface hover:bg-primary-container transition-colors group cursor-crosshair">
+<div class="flex justify-between items-start mb-12"><span class="text-6xl font-black font-headline">01</span><span class="material-symbols-outlined text-4xl">architecture</span></div>
+<h2 class="text-5xl font-black uppercase tracking-tighter mb-4">GANs</h2><div class="w-full h-48 bg-primary mb-6 border-2 border-black overflow-hidden"><img class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1syAFKRGG1ALGsZ-AjBP2Z-6LHOGTHdonoFZNFpuski_BBjg8w8Uo-QX8V3rwLyC7a0cOnXk-TGP8MwO7x73s5zt-EYFZBsBPnUXaTDdahgmkOJNwNHDxllH2V2_b71T_T2SjXBYjRKwBFs8kbPhoxRoY1vreYEFAiAhevGYU6y23Fy9sZL2JPZcyINx4ZKroxYD_6vC_8dF6OGT6e07hL6mHoj3IZ9shkcRDNOJNeaLdq0ZXyqDV6oqSiES_IRg3-7UVq2EZ7w4"/></div>
+<p class="font-body text-lg leading-snug mb-8">Adversarial training for sharp, authentic line preservation. No bleeds, just precision.</p>
+</div>
+<div class="border-4 border-black p-8 bg-secondary text-white hover:bg-black transition-colors group cursor-crosshair">
+<div class="flex justify-between items-start mb-12"><span class="text-6xl font-black font-headline">02</span><span class="material-symbols-outlined text-4xl">brush</span></div>
+<h2 class="text-5xl font-black uppercase tracking-tighter mb-4">STYLIZING</h2><div class="w-full h-48 bg-white mb-6 border-2 border-black overflow-hidden"><img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-cFVjO0qu3cWHXaiOJqkSKOpUapyP5XRIhxxTnBVegst6LyERLztrJKf7utVMFSrOJGh4j1Vx-IGVMpBtpJdvexS-gHA3nQcmptltMT-ZZYat90twOhmmkn-71MZLxHpRmOqwXcwonBObWf1-wMV00vY_2g7g6AFlTjo7XS6NsLdS7AIdrqCwB6cVslfHBKXK0bZ397WmTwqvxXgGUHbxdtPL9FDk0iz4uivKXmc0Nd5gSeLbPcRgswFgtrOqQ3Ox5KGuuVVRQvs"/></div>
+<p class="font-body text-lg leading-snug mb-8">Latent consistency. Every panel maintains the same color palette throughout the chapter.</p>
+</div>
+<div class="border-4 border-black p-8 bg-tertiary text-white hover:bg-primary-container hover:text-black transition-colors group cursor-crosshair">
+<div class="flex justify-between items-start mb-12"><span class="text-6xl font-black font-headline">03</span><span class="material-symbols-outlined text-4xl">data_object</span></div>
+<h2 class="text-5xl font-black uppercase tracking-tighter mb-4">SEGMENT</h2><div class="w-full h-48 bg-primary-fixed mb-6 border-2 border-black overflow-hidden"><img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOhfwgmAj6cncb3MrpY6ATGJzJi_cO-NNqEQDrL5iKGyCOUDEdVhiNtpty_8hOpVEg9WyknuiYmzRHBWAXudkz1_qM9bjqMhtkWC5rBbPEmdNml-9p3C_3Wbm3xTBZO9639yaVMOeEmasHRjSvCUZCtzTAvdhhIGJE34YK9koadAcheHOhhDsyFxBnjbDNa3-p39RUSP5zzSxxb1w-CJnrqPxhiPjZh9YuedC_M-WnPyY1wXQf8Zpq-HwpSEx6H-McdZooil1Ifxo"/></div>
+<p class="font-body text-lg leading-snug mb-8">Computer vision masks for foreground separation. Focus on the characters, color the background later.</p>
+</div>
+</div></div>
+        <div id="armory" class="page-section hidden"><section class="mb-16 border-l-8 border-black pl-8 py-4"><h1 class="text-7xl md:text-9xl font-black uppercase leading-none tracking-tighter mb-4">ART<br/>ARCHIVE</h1><p class="text-xl md:text-2xl font-bold uppercase tracking-widest text-on-surface-variant max-w-2xl">Neural rendering meets digital ink.</p></section>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-6">
+<div class="md:col-span-2 md:row-span-2 border-4 border-black p-8 flex flex-col justify-between bg-white neo-shadow group hover:bg-primary-fixed transition-colors">
+<div class="flex justify-between items-start"><div><span class="bg-black text-white px-3 py-1 font-headline font-bold text-sm">V2.4</span><h2 class="text-6xl font-black mt-4 font-headline uppercase leading-none">SHONEN</h2></div><span class="material-symbols-outlined text-5xl">auto_awesome</span></div>
+<div class="my-12 flex justify-center"><img class="w-full h-48 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-l6OUraY2Rq2iua7eIyNdN8DTNFxtYeqBNqABCJm9XI10d2p5RBC35JjGZde903Ly54OBDF8d6PE6WR7v7JpGuAW0SS-WfQG7bpoZhj54erHfN9DNOnsPVagFnDgCyH634U9ynHUPl-tbI1EdzGGpLsZbJhYfsrGR2SauwaN5oh_x9loM-PgE8G5lT1PmhZI14FTw47RoXM4Pmy81BCepL7dhpbw-9nf-ZVS7D_J1LmFJsSp4zI7lFjh2b6N7VrvCyS0Q3Sn2ik0"/></div>
+<button class="w-full border-2 border-black py-4 font-headline font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all">EXPLORE GALLERY</button>
+</div>
+<div class="md:col-span-2 border-4 border-black p-6 bg-tertiary text-white neo-shadow flex items-center justify-between group">
+<h3 class="text-4xl font-black font-headline uppercase">SEINEN DARK</h3><img class="w-24 h-24 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj744CSA-DvaYEp5t0pKcZ41HpT4BwIftSMCqIbk110AkKYuUn4VJN2PtaM3tIGO1Sm-xdbxpnO5xhY40BUDs-a2Nf3BWkF7U4sFyX2G3p714Y2wSVM0oH6myQWGbpHnxZ_2wCodPWJnKxmujqqTZE_bHwoh4DZEYmdMswnGX54NNXE_0rXKp8g8eTGKNCv4XRoOsEy0ejqsbcRLNB8gDMkIzHd2Sfa4-lZG90xYNa09bEQZWvQ9OxTfphE3p8bUT-W_1b3hoO-j8"/>
+</div>
+<div class="md:col-span-2 border-4 border-black p-8 bg-black text-white neo-shadow"><div class="grid grid-cols-2 gap-8">
+<div><h4 class="text-primary-fixed font-headline font-black text-4xl">8ms</h4><p class="text-xs uppercase mt-2">Inference Speed</p></div>
+<div><h4 class="text-secondary font-headline font-black text-4xl">100k+</h4><p class="text-xs uppercase mt-2">Training Assets</p></div>
+</div></div>
+</div></div>
+        <div id="join" class="page-section hidden"><section class="p-8 md:p-16 border-b-4 border-black grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
+<div class="space-y-6"><span class="bg-secondary text-white px-4 py-1 font-headline font-black uppercase text-xl inline-block border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">BUILD WITH US</span><h1 class="text-7xl md:text-9xl font-headline font-black uppercase leading-none tracking-tighter">COLOR<br/>THE<br/><span class="text-primary-fixed">FUTURE.</span></h1></div>
+<div class="relative group"><img class="w-full aspect-square object-cover border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj744CSA-DvaYEp5t0pKcZ41HpT4BwIftSMCqIbk110AkKYuUn4VJN2PtaM3tIGO1Sm-xdbxpnO5xhY40BUDs-a2Nf3BWkF7U4sFyX2G3p714Y2wSVM0oH6myQWGbpHnxZ_2wCodPWJnKxmujqqTZE_bHwoh4DZEYmdMswnGX54NNXE_0rXKp8g8eTGKNCv4XRoOsEy0ejqsbcRLNB8gDMkIzHd2Sfa4-lZG90xYNa09bEQZWvQ9OxTfphE3p8bUT-W_1b3hoO-j8"/><div class="absolute -bottom-4 -left-4 bg-tertiary text-white p-4 font-headline font-bold uppercase tracking-widest border-2 border-black">DEV BRANCH</div></div>
+</section>
+<section class="p-8 md:p-16 bg-white"><form class="space-y-12"><div class="grid grid-cols-1 md:grid-cols-2 gap-12"><input class="w-full bg-primary-fixed border-b-4 border-black p-4 font-headline font-bold text-2xl" placeholder="HANDLE" type="text"/><input class="w-full bg-primary-fixed border-b-4 border-black p-4 font-headline font-bold text-2xl" placeholder="EMAIL" type="email"/></div><button class="w-full bg-black text-white p-8 font-headline font-black text-5xl uppercase border-4 border-black shadow-[12px_12px_0px_0px_#ffcc00] hover:translate-x-2 hover:translate-y-2 hover:shadow-none transition-all duration-150" type="submit">JOIN IROZUKE</button></form></section></div>
+    </main>
+    
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-8 bg-black text-[#f5f0e8] border-t-4 border-black font-['Space_Grotesk'] text-sm uppercase tracking-widest">
+    <div class="text-xl font-bold text-[#ffcc00]">IROZUKE.AI</div>
+    <div class="flex gap-8"><span>Chroma</span><span>Neural</span><span>Ink</span><span>Flow</span></div>
+    <div class="opacity-60">© 2026 IROZUKE LABS. ART BY INTELLIGENCE.</div>
+</footer>
+
+    
+<script>
+    function showPage(pageId) {
+        document.querySelectorAll('.page-section').forEach(section => section.classList.add('hidden'));
+        document.getElementById(pageId).classList.remove('hidden');
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            if(btn.getAttribute('data-page') === pageId) {
+                btn.classList.add('bg-[#ffcc00]', 'text-black', 'border-2', 'border-black');
+            } else {
+                btn.classList.remove('bg-[#ffcc00]', 'text-black', 'border-2', 'border-black');
+            }
+        });
+        window.scrollTo({top: 0});
+    }
+</script>
+
+</body>
+</html>
